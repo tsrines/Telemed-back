@@ -1,0 +1,3 @@
+class DoctorAilmentsController < ApplicationController
+ 
+end
