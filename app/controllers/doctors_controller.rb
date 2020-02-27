@@ -7,7 +7,7 @@ class DoctorsController < ApplicationController
 
   def create  
     doctor = Doctor.find_or_create_by(doctor_params)
-    
+
     render json: doctor
   end
 
@@ -17,6 +17,7 @@ class DoctorsController < ApplicationController
 
   def show
     doctor = Doctor.find(params[:id])
+    
     render json: doctor
   end 
 
