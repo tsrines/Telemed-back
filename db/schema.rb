@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2020_02_26_201015) do
     t.string "first_name"
     t.string "last_name"
     t.string "title"
+    t.string "specialty"
+    t.string "image"
     t.string "address"
     t.string "gender"
     t.string "bio"
