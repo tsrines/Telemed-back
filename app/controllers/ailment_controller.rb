@@ -1,3 +1,0 @@
-class AilmentController < ApplicationController
-
-end
