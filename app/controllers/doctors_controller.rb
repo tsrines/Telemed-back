@@ -5,6 +5,10 @@ class DoctorsController < ApplicationController
     render json: doctors
   end
 
+  def seed
+    render json: Doctor.all
+  end
+
   def create  
     doctor = Doctor.find_or_create_by(doctor_params)
 
