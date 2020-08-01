@@ -4,6 +4,11 @@ Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+
+  ENV['REACT_APP_GOOGLE_API_KEY'] = 'AIzaSyCuEOeSzUNgNIoiSLtWMZdIUPkl0S3DTDI'
+  ENV['REACT_APP_BETTER_DOC'] = '456c38f1b8349922db25eb4a4fd44429'
+  ENV['REACT_APP_API_URL'] = 'https://cryptic-island-45793.herokuapp.com'
+
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -25,6 +30,8 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.debug_exception_response_format = :api
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
@@ -41,7 +48,6 @@ Rails.application.configure do
 
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
-
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true

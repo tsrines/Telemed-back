@@ -1,12 +1,11 @@
 class FavoritesController < ApplicationController
-
-  def index 
+  def index
     favorites = Favorite.all
 
     render json: favorites
   end
 
-  def create 
+  def create
     favorite = Favorite.find_or_create_by(favorite_params)
 
     render json: favorite
@@ -19,16 +18,14 @@ class FavoritesController < ApplicationController
     render json: favorite
   end
 
-  def show 
+  def show
     favorite = Favorite.find(params[:id])
     render json: favorite
   end
 
-  private 
+  private
 
   def favorite_params
     params.require(:favorite).permit(:user_id, :doctor_id, :api_id)
   end
-
-
 end

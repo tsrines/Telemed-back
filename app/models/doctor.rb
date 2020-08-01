@@ -1,9 +1,9 @@
-
 class Doctor < ApplicationRecord
-  include Gravtastic
-  is_gravtastic
-  has_many :favorites
-  has_many :users, through: :favorites
-  validates_uniqueness_of :api_id
+  # validates :place_id, uniqueness: true
+  has_many :favorites, dependent: :destroy
+  has_many :photos, dependent: :destroy
 
+  has_many :reviews, dependent: :destroy
+
+  has_many :users, through: :favorites
 end
