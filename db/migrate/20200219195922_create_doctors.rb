@@ -1,16 +1,17 @@
 class CreateDoctors < ActiveRecord::Migration[6.0]
   def change
     create_table :doctors do |t|
-      t.string :api_id
-      t.string :first_name
-      t.string :last_name
-      t.string :title
-      t.string :specialty
-      t.string :image
-      t.string :address
-      t.string :gender
-      t.string :bio
-      t.string :phone_number
+      t.string :place_id
+      t.string :name
+      t.string :photo
+      t.string :formatted_address
+      t.float :rating
+      t.integer :user_ratings_total
+      t.string :formatted_phone_number
+      t.float :lat
+      t.float :lng
+      t.string :url
+      t.string :website
 
       t.timestamps
     end

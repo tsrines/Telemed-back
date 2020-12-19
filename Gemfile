@@ -13,19 +13,26 @@ gem 'puma', '~> 4.3'
 # gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'phantomjs'
 gem 'scrapix'
-gem 'pry'
-gem 'gravatar_image_tag'
+
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem 'active_model_serializers', '~> 0.10.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "jwt", "~> 2.2"
+gem 'json'
+gem "rest-client", "~> 2.1"
+gem "dotenv", "~> 2.7"
+
 gem 'rack-cors'
 
 group :development, :test do
@@ -41,19 +48,10 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem "jwt", "~> 2.2"
-
-gem "faker", "~> 2.12"
-
-gem "faker-bot", "~> 0.5.3"
-
-
-
-gem 'gravtastic'
 
 
 
 
+gem "google_places", "~> 2.0"
 
+gem "pry", "~> 0.13.1"

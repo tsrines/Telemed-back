@@ -1,5 +1,19 @@
 class DoctorSerializer < ActiveModel::Serializer
-  attributes :id, :api_id, :first_name, :last_name, :title, :address, :gender, :bio, :phone_number, :image, :specialty
+  attributes :id,
+             :place_id,
+             :name,
+             :formatted_address,
+             :rating,
+             :user_ratings_total,
+             :formatted_phone_number,
+             :lat,
+             :lng,
+             :url,
+             :photo,
+             :website
+
+  has_many :reviews
+  has_many :photos
   has_many :favorites
   has_many :users, through: :favorites
 end
