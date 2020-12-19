@@ -49,14 +49,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 
-<<<<<<< HEAD
 
 
 
 gem "google_places", "~> 2.0"
 
 gem "pry", "~> 0.13.1"
-=======
 gem "jwt", "~> 2.2"
 
 gem "faker", "~> 2.12"
@@ -71,4 +69,3 @@ gem 'gravtastic'
 
 
 
->>>>>>> 2066cac368d574c4bda5d839954666d0af18ab70
