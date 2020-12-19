@@ -5,14 +5,6 @@ class DoctorsController < ApplicationController
 
   def show
     doctor = Doctor.find(params[:id])
-    
-  def seed
-    render json: Doctor.all
-  end
-
-  def create  
-    doctor = Doctor.find_or_create_by(doctor_params)
-
     render json: doctor
   end
 
