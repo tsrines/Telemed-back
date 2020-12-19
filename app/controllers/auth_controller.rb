@@ -6,7 +6,7 @@ class AuthController < ApplicationController
       token = encode_token(user.id)
       render json: { user: user, token: token }
     else
-      render json: { errors: user.errors.full_messages }
+      render json: { error: 'Not authenticated' }
     end
   end
 
@@ -14,7 +14,7 @@ class AuthController < ApplicationController
     if session_user
       render json: session_user
     else
-      render json: { errors: ["Please log in again"] }
+      render json: { error: 'Please log in again' }
     end
   end
 end
