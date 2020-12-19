@@ -11,16 +11,3 @@ Photo.all.destroy_all
 Favorite.all.destroy_all
 User.all.destroy_all
 Doctor.all.destroy_all
-
-# 100.times do
-#   Doctor.create(
-#     api_id: rand(1..100).to_s,
-#     first_name: Faker::FunnyName.name,
-#     last_name: Faker::FunnyName.name,
-#     title: "Dr.", specialty: Faker::Job.key_skill,
-#     image: Faker::Avatar.image,
-#     address: Faker::Address.full_address,
-#     gender: Faker::Gender.binary_type,
-#     bio: Faker::Hipster.paragraph,
-#     phone_number: Faker::PhoneNumber.phone_number)
-# end
