@@ -10,7 +10,9 @@ class SearchesController < ApplicationController
 
   def show
     search = Search.find_by(id: params[:id])
-    render json: search
+    doctors = []
+    search.csv.split(',').each { |id| doctors.push(Doctor.find(id)) }
+    render json: doctors
   end
 
   private
