@@ -5,8 +5,7 @@ class ReviewsController < ApplicationController
   def new; end
 
   def create
-    @client =
-      GooglePlaces::Client.new('AIzaSyCKNMJVbAE5aufv8aAytH0pxJXIAPPY4Os')
+    @client = GooglePlaces::Client.new(ENV['GOOGLE_PLACES_API_KEY'])
 
     @spot = @client.spot(params[:place_id])
 

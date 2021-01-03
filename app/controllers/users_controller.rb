@@ -28,7 +28,6 @@ class UsersController < ApplicationController
 
   def update
     user = User.find(params[:id])
-    # byebug
     if user.update(user_params)
       render json: user
     else
@@ -45,7 +44,8 @@ class UsersController < ApplicationController
       :password_confirmation,
       :first_name,
       :last_name,
-      :address
+      :address,
+      :role
     )
   end
 end
